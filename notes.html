@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Field Notes Archive</title>
+    <meta
+      name="description"
+      content="Visual field notes for money, home, health, work, and technical topics."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./notes.css" />
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Main navigation">
+        <div class="brand"><a href="./index.html">Field Notes</a></div>
+        <div class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="#money-notes">Money</a>
+          <a href="#work-notes">Work</a>
+          <a href="#home-notes">Home</a>
+          <a href="#technology-notes">Technology</a>
+          <a href="#science-notes">Science</a>
+          <a href="#real-estate-notes">Real Estate</a>
+        </div>
+      </nav>
+
+      <header class="hero">
+        <p class="section-label">Archive</p>
+        <h1>Field Notes</h1>
+        <p class="intro">
+          Recovered long-form notes on money, work, home, technology, science,
+          and real estate, preserved alongside the newer landing page.
+        </p>
+      </header>
+
+      <section class="section" id="guides">
+        <p class="section-label">Note library</p>
+        <h2>Current notes</h2>
+        <p>
+          Core categories: Money, Work, Home, Technology, Science, Real Estate.
+        </p>
+        <h3 id="money-notes">Money</h3>
+        <ul class="guide-list">
+          <li><a href="#investing-guide">Tax Advantaged Accounts</a> <span class="tag">Money</span></li>
+          <li><a href="#backdoor-roth-guide">Backdoor Roth IRA strategy</a> <span class="tag">Money</span></li>
+        </ul>
+        <h3 id="work-notes">Work</h3>
+        <ul class="guide-list">
+          <li>0-&gt;1 Product Management <span class="tag">Work</span></li>
+          <li>Product Lingo <span class="tag">Work</span></li>
+          <li>Start Up vs. Big Org Product Management <span class="tag">Work</span></li>
+          <li>Culture and Process <span class="tag">Work</span></li>
+        </ul>
+        <h3 id="home-notes">Home</h3>
+        <ul class="guide-list">
+          <li>Hardscaping <span class="tag">Home</span></li>
+          <li>Paint and Plaster <span class="tag">Home</span></li>
+          <li>Framing and Electric <span class="tag">Home</span></li>
+          <li>Plumbing <span class="tag">Home</span></li>
+          <li>Native Plants <span class="tag">Home</span></li>
+        </ul>
+        <h3 id="technology-notes">Technology</h3>
+        <ul class="guide-list">
+          <li><a href="#einstein-ai-guide">Einstein and AI, tensor math and vector databases</a> <span class="tag">Technology</span> <span class="tag">Science</span></li>
+          <li>Context Window, RAG, and MCP <span class="tag">Technology</span></li>
+        </ul>
+        <h3 id="science-notes">Science</h3>
+        <ul class="guide-list">
+          <li><a href="#einstein-ai-guide">Einstein and AI, tensor math and vector databases</a> <span class="tag">Technology</span> <span class="tag">Science</span></li>
+          <li>70s HiFi <span class="tag">Science</span></li>
+        </ul>
+        <h3 id="real-estate-notes">Real Estate</h3>
+        <ul class="guide-list">
+          <li>No notes yet</li>
+        </ul>
+      </section>
+
+      <section class="section" id="investing-guide">
+        <p class="section-label">Money</p>
+        <h2>Note 1: Tax Advantaged Accounts</h2>
+        <p>
+          A quick comparison of the main tax-advantaged accounts people use for
+          retirement and medical savings.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>401(k)</th>
+                <th>Roth 401(k)</th>
+                <th>Traditional IRA</th>
+                <th>Roth IRA</th>
+                <th>HSA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Who offers it</th>
+                <td>Employer</td>
+                <td>Employer</td>
+                <td>You</td>
+                <td>You, with income limits<sup>[2]</sup></td>
+                <td>You, if enrolled in an HSA-eligible HDHP</td>
+              </tr>
+              <tr>
+                <th>Tax Free Contribution</th>
+                <td><span class="yes">✓</span> Yes</td>
+                <td><span class="no">✗</span> No</td>
+                <td>Maybe, depends on income and if workplace offers plan<sup>[1]</sup></td>
+                <td><span class="no">✗</span> No</td>
+                <td><span class="yes">✓</span> Yes</td>
+              </tr>
+              <tr>
+                <th>Tax Free Growth</th>
+                <td><span class="yes">✓</span> Yes</td>
+                <td><span class="yes">✓</span> Yes</td>
+                <td><span class="yes">✓</span> Yes</td>
+                <td><span class="yes">✓</span> Yes</td>
+                <td><span class="yes">✓</span> Yes</td>
+              </tr>
+              <tr>
+                <th>Tax Free Withdrawal</th>
+                <td>Ordinary income</td>
+                <td><span class="yes">✓</span> Tax-free</td>
+                <td>Ordinary income</td>
+                <td><span class="yes">✓</span> Tax-free</td>
+                <td><span class="yes">✓</span> Tax-free for qualified medical expenses</td>
+              </tr>
+              <tr>
+                <th>2026 contribution limit</th>
+                <td>$24,500</td>
+                <td>Combined with 401(k)</td>
+                <td>$7,500</td>
+                <td>$7,500</td>
+                <td>$4,400 individual / $8,750 family</td>
+              </tr>
+              <tr>
+                <th>Catch-up contribution</th>
+                <td>$8,000 age 50+; $11,250 age 60-63</td>
+                <td>Combined with 401(k)</td>
+                <td>$1,100 age 50+</td>
+                <td>$1,100 age 50+</td>
+                <td>$1,000 age 55+</td>
+              </tr>
+              <tr>
+                <th>Income limit to contribute</th>
+                <td><span class="no">✗</span> None</td>
+                <td><span class="no">✗</span> None</td>
+                <td><span class="no">✗</span> None</td>
+                <td><span class="yes">✓</span> Yes, subject to phase-out</td>
+                <td><span class="no">✗</span> No income limit</td>
+              </tr>
+              <tr>
+                <th>Employer match</th>
+                <td><span class="yes">✓</span> Yes, if plan offers it</td>
+                <td><span class="yes">✓</span> Yes, if plan offers it</td>
+                <td><span class="no">✗</span> No</td>
+                <td><span class="no">✗</span> No</td>
+                <td>Sometimes</td>
+              </tr>
+              <tr>
+                <th>Required minimum distributions</th>
+                <td><span class="yes">✓</span> Yes</td>
+                <td><span class="no">✗</span> No</td>
+                <td><span class="yes">✓</span> Yes</td>
+                <td><span class="no">✗</span> No</td>
+                <td><span class="no">✗</span> No</td>
+              </tr>
+              <tr>
+                <th>Best use case</th>
+                <td>Reduce taxes now, especially with a match</td>
+                <td>Lock in tax-free retirement withdrawals</td>
+                <td>Extra tax-advantaged retirement space</td>
+                <td>Tax-free retirement growth and flexibility</td>
+                <td>Medical savings with strong tax treatment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notes">
+          <h3>2026 income phase-outs</h3>
+          <ul>
+            <li>Roth IRA, single: $153,000 to $168,000</li>
+            <li>Roth IRA, married filing jointly: $242,000 to $252,000</li>
+            <li>Traditional IRA deduction, single and covered by workplace plan: $81,000 to $91,000</li>
+            <li>Traditional IRA deduction, married filing jointly and covered by workplace plan: $129,000 to $149,000</li>
+          </ul>
+        </div>
+
+        <div class="notes">
+          <h3>Footnotes</h3>
+          <ul>
+            <li><sup>[1]</sup> Traditional IRA contributions reduce taxable income only if deductible. Deductibility depends on income and whether you or your spouse are covered by a workplace retirement plan.</li>
+            <li><sup>[2]</sup> Roth IRA contributions are subject to income phase-outs. For 2026, the phase-out starts at $153,000 for single filers and $242,000 for married filing jointly.</li>
+          </ul>
+        </div>
+
+        <p class="source-note">
+          Sources: IRS 2026 retirement plan limits, Notice 2025-67; IRS 2026
+          HSA limits, Rev. Proc. 2025-19.
+        </p>
+      </section>
+
+      <section class="section" id="backdoor-roth-guide">
+        <p class="section-label">Money</p>
+        <h2>Note 2: Backdoor Roth IRA strategy</h2>
+        <p>
+          Imported from your Downloads folder as an image guide. Open it full
+          size or preview it below.
+        </p>
+        <p>
+          <a href="./assets/backdoor-roth-ira-strategy-explained.png" target="_blank" rel="noopener noreferrer">
+            Open full guide image
+          </a>
+        </p>
+        <div class="image-wrap">
+          <img
+            src="./assets/backdoor-roth-ira-strategy-explained.png"
+            alt="Backdoor Roth IRA strategy explained"
+          />
+        </div>
+      </section>
+
+      <section class="section" id="technical-guides">
+        <p class="section-label">Technology and Science</p>
+        <h2>Technical note set</h2>
+        <p>
+          A new track for compact explainers on math, AI infrastructure, and
+          physics concepts.
+        </p>
+      </section>
+
+      <section class="section" id="einstein-ai-guide">
+        <p class="section-label">Technology and Science</p>
+        <h2>Note 3: Einstein and AI, tensor math and vector databases</h2>
+        <p>
+          A simple map of how tensor math connects physics and machine learning,
+          and how vectors show up in the retrieval layer of modern AI systems.
+        </p>
+
+        <figure class="visual-block">
+          <svg
+            viewBox="0 0 920 420"
+            role="img"
+            aria-labelledby="math-visual-title math-visual-desc"
+          >
+            <title id="math-visual-title">Matrix and vector space visual</title>
+            <desc id="math-visual-desc">
+              A matrix on the left and a vector space plot on the right showing
+              coordinates, distances, and nearest neighbors.
+            </desc>
+
+            <rect x="20" y="20" width="360" height="380" rx="12" fill="#f8f8f8" stroke="#d8d8d8" />
+            <text x="44" y="58" class="svg-heading">3D tensor</text>
+            <text x="44" y="86" class="svg-copy">A tensor can be visualized as multiple matrices stacked together.</text>
+
+            <rect x="84" y="164" width="56" height="56" fill="#edf4ff" stroke="#9bb8f0" />
+            <rect x="140" y="164" width="56" height="56" fill="#dce9ff" stroke="#9bb8f0" />
+            <rect x="196" y="164" width="56" height="56" fill="#c9ddff" stroke="#9bb8f0" />
+            <rect x="84" y="220" width="56" height="56" fill="#dce9ff" stroke="#9bb8f0" />
+            <rect x="140" y="220" width="56" height="56" fill="#b5d1ff" stroke="#6f9af0" />
+            <rect x="196" y="220" width="56" height="56" fill="#dce9ff" stroke="#9bb8f0" />
+            <rect x="84" y="276" width="56" height="56" fill="#edf4ff" stroke="#9bb8f0" />
+            <rect x="140" y="276" width="56" height="56" fill="#c9ddff" stroke="#9bb8f0" />
+            <rect x="196" y="276" width="56" height="56" fill="#dce9ff" stroke="#9bb8f0" />
+
+            <rect x="102" y="142" width="56" height="56" fill="#f3f8ff" stroke="#adc4f4" />
+            <rect x="158" y="142" width="56" height="56" fill="#e3efff" stroke="#adc4f4" />
+            <rect x="214" y="142" width="56" height="56" fill="#d0e2ff" stroke="#adc4f4" />
+            <rect x="102" y="198" width="56" height="56" fill="#e3efff" stroke="#adc4f4" />
+            <rect x="158" y="198" width="56" height="56" fill="#bfd8ff" stroke="#89aef2" />
+            <rect x="214" y="198" width="56" height="56" fill="#e3efff" stroke="#adc4f4" />
+            <rect x="102" y="254" width="56" height="56" fill="#f3f8ff" stroke="#adc4f4" />
+            <rect x="158" y="254" width="56" height="56" fill="#d0e2ff" stroke="#adc4f4" />
+            <rect x="214" y="254" width="56" height="56" fill="#e3efff" stroke="#adc4f4" />
+
+            <rect x="120" y="120" width="56" height="56" fill="#ffffff" stroke="#c8d8f5" />
+            <rect x="176" y="120" width="56" height="56" fill="#eef5ff" stroke="#c8d8f5" />
+            <rect x="232" y="120" width="56" height="56" fill="#dbeaff" stroke="#c8d8f5" />
+            <rect x="120" y="176" width="56" height="56" fill="#eef5ff" stroke="#c8d8f5" />
+            <rect x="176" y="176" width="56" height="56" fill="#c8ddff" stroke="#8baef1" />
+            <rect x="232" y="176" width="56" height="56" fill="#eef5ff" stroke="#c8d8f5" />
+            <rect x="120" y="232" width="56" height="56" fill="#ffffff" stroke="#c8d8f5" />
+            <rect x="176" y="232" width="56" height="56" fill="#dbeaff" stroke="#c8d8f5" />
+            <rect x="232" y="232" width="56" height="56" fill="#eef5ff" stroke="#c8d8f5" />
+
+            <line x1="84" y1="164" x2="120" y2="120" stroke="#94a9c8" stroke-width="2" />
+            <line x1="252" y1="164" x2="288" y2="120" stroke="#94a9c8" stroke-width="2" />
+            <line x1="84" y1="332" x2="120" y2="288" stroke="#94a9c8" stroke-width="2" />
+            <line x1="252" y1="332" x2="288" y2="288" stroke="#94a9c8" stroke-width="2" />
+
+            <text x="144" y="114" class="svg-label">slice 1</text>
+            <text x="126" y="136" class="svg-cell">2</text>
+            <text x="182" y="136" class="svg-cell">5</text>
+            <text x="238" y="136" class="svg-cell">1</text>
+            <text x="126" y="192" class="svg-cell">4</text>
+            <text x="182" y="192" class="svg-cell">9</text>
+            <text x="238" y="192" class="svg-cell">3</text>
+            <text x="126" y="248" class="svg-cell">0</text>
+            <text x="182" y="248" class="svg-cell">6</text>
+            <text x="238" y="248" class="svg-cell">4</text>
+
+            <text x="126" y="344" class="svg-copy">shape: (3, 3, 3)</text>
+            <text x="44" y="368" class="svg-copy">Each slice is a matrix. Stacking slices creates a higher-dimensional tensor.</text>
+
+            <rect x="400" y="20" width="500" height="380" rx="12" fill="#f8f8f8" stroke="#d8d8d8" />
+            <text x="424" y="58" class="svg-heading">Vector space</text>
+            <text x="424" y="86" class="svg-copy">Each point has coordinates. Nearby points are more similar.</text>
+
+            <line x1="470" y1="340" x2="850" y2="340" stroke="#777" stroke-width="2" />
+            <line x1="470" y1="340" x2="470" y2="110" stroke="#777" stroke-width="2" />
+            <text x="855" y="345" class="svg-axis">x</text>
+            <text x="462" y="102" class="svg-axis">y</text>
+
+            <line x1="590" y1="310" x2="640" y2="250" stroke="#8fa3bf" stroke-dasharray="6 6" />
+            <line x1="640" y1="250" x2="720" y2="230" stroke="#8fa3bf" stroke-dasharray="6 6" />
+            <line x1="590" y1="310" x2="760" y2="180" stroke="#d9b26f" stroke-dasharray="6 6" />
+
+            <circle cx="590" cy="310" r="12" fill="#0b57d0" />
+            <circle cx="640" cy="250" r="12" fill="#3f7fdb" />
+            <circle cx="720" cy="230" r="12" fill="#69a0ea" />
+            <circle cx="760" cy="180" r="12" fill="#d67d2f" />
+
+            <text x="530" y="332" class="svg-label">Query (2,1)</text>
+            <text x="614" y="242" class="svg-label">Doc A</text>
+            <text x="694" y="222" class="svg-label">Doc B</text>
+            <text x="734" y="172" class="svg-label">Farther point</text>
+
+            <text x="506" y="372" class="svg-copy">Vector databases search for the nearest points, not exact text matches.</text>
+          </svg>
+          <figcaption>
+            Left: a matrix shows values arranged across two dimensions. Right:
+            embeddings place items in a coordinate space where distance
+            approximates similarity.
+          </figcaption>
+        </figure>
+
+        <h3>Big idea</h3>
+        <p>
+          Einstein and AI are not “the same math,” but they do share a useful
+          language: tensors help describe structured relationships across many
+          dimensions. In physics, tensors describe things like curvature and
+          stress in spacetime. In AI, tensors are the basic containers used to
+          represent inputs, weights, activations, and gradients.
+        </p>
+
+        <h3>Three building blocks</h3>
+        <ul class="guide-list">
+          <li><strong>Scalars</strong>: one number, like temperature or loss.</li>
+          <li><strong>Vectors</strong>: ordered lists of numbers, like an embedding.</li>
+          <li><strong>Tensors</strong>: higher-dimensional arrays that generalize vectors and matrices.</li>
+        </ul>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Concept</th>
+                <th>In physics</th>
+                <th>In AI</th>
+                <th>Why it matters</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Vector</th>
+                <td>Direction and magnitude in space</td>
+                <td>Embedding for text, image, or user behavior</td>
+                <td>Lets you compare things by distance or similarity</td>
+              </tr>
+              <tr>
+                <th>Tensor</th>
+                <td>Object used to describe curvature, stress, and fields</td>
+                <td>Core data structure for neural networks and training</td>
+                <td>Keeps track of values across multiple dimensions</td>
+              </tr>
+              <tr>
+                <th>Geometry</th>
+                <td>Mass-energy changes the geometry of spacetime</td>
+                <td>Embeddings organize meaning in a geometric space</td>
+                <td>Structure in the space helps explain relationships</td>
+              </tr>
+              <tr>
+                <th>Search</th>
+                <td>Find paths such as geodesics through curved spacetime</td>
+                <td>Find nearest neighbors in embedding space</td>
+                <td>Useful answers often come from “what is closest”</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Einstein side: why tensors matter</h3>
+        <p>
+          General relativity describes gravity not as a force pulling objects
+          together, but as curvature in spacetime. To describe curvature in a
+          coordinate-independent way, the theory uses tensors. That is why the
+          Einstein field equations are written with tensor objects rather than
+          ordinary algebra alone.
+        </p>
+
+        <h3>AI side: where tensors and vectors show up</h3>
+        <p>
+          In machine learning frameworks, almost everything is a tensor:
+          batches of tokens, image pixels, weight matrices, activations, and
+          gradients. A vector database sits one layer higher. It stores
+          embeddings, which are vectors representing semantic meaning, and helps
+          retrieve the nearest matches for search, recommendation, and RAG
+          systems.
+        </p>
+        <p>
+          An LLM turns the words in your prompt into numbers, looks for patterns
+          it learned during training, and predicts the most likely next token
+          one step at a time until it builds a full response.
+        </p>
+
+        <h3>Example: a real LLM tensor</h3>
+        <p>
+          One common tensor inside a language model is the hidden-state tensor.
+          A simplified shape might look like <code>[batch, tokens, hidden_size]</code>.
+          For example, <code>[2, 4, 8]</code> means:
+        </p>
+        <ul class="guide-list">
+          <li><strong>2</strong> sequences in the batch</li>
+          <li><strong>4</strong> token positions per sequence</li>
+          <li><strong>8</strong> numbers used to represent each token at that layer</li>
+        </ul>
+
+        <figure class="visual-block">
+          <svg
+            viewBox="0 0 920 360"
+            role="img"
+            aria-labelledby="llm-tensor-title llm-tensor-desc"
+          >
+            <title id="llm-tensor-title">LLM hidden state tensor visual</title>
+            <desc id="llm-tensor-desc">
+              A hidden-state tensor with batch, token positions, and one
+              highlighted token vector.
+            </desc>
+
+            <rect x="20" y="20" width="520" height="320" rx="12" fill="#f8f8f8" stroke="#d8d8d8" />
+            <text x="44" y="58" class="svg-heading">Hidden-state tensor</text>
+            <text x="44" y="86" class="svg-copy">shape: [batch, tokens, hidden_size] = [2, 4, 8]</text>
+
+            <text x="72" y="126" class="svg-label">batch 0</text>
+            <rect x="70" y="140" width="90" height="54" rx="8" fill="#dce9ff" stroke="#9bb8f0" />
+            <rect x="176" y="140" width="90" height="54" rx="8" fill="#dce9ff" stroke="#9bb8f0" />
+            <rect x="282" y="140" width="90" height="54" rx="8" fill="#dce9ff" stroke="#9bb8f0" />
+            <rect x="388" y="140" width="90" height="54" rx="8" fill="#dce9ff" stroke="#9bb8f0" />
+            <text x="98" y="164" class="svg-label">The</text>
+            <text x="193" y="164" class="svg-label">cat</text>
+            <text x="304" y="164" class="svg-label">sat</text>
+            <text x="419" y="164" class="svg-label">.</text>
+            <text x="88" y="184" class="svg-mini">token 0</text>
+            <text x="194" y="184" class="svg-mini">token 1</text>
+            <text x="300" y="184" class="svg-mini">token 2</text>
+            <text x="406" y="184" class="svg-mini">token 3</text>
+
+            <text x="72" y="236" class="svg-label">batch 1</text>
+            <rect x="70" y="250" width="90" height="54" rx="8" fill="#edf4ff" stroke="#bdd0f2" />
+            <rect x="176" y="250" width="90" height="54" rx="8" fill="#edf4ff" stroke="#bdd0f2" />
+            <rect x="282" y="250" width="90" height="54" rx="8" fill="#edf4ff" stroke="#bdd0f2" />
+            <rect x="388" y="250" width="90" height="54" rx="8" fill="#edf4ff" stroke="#bdd0f2" />
+            <text x="92" y="274" class="svg-label">Dogs</text>
+            <text x="189" y="274" class="svg-label">run</text>
+            <text x="305" y="274" class="svg-label">fast</text>
+            <text x="419" y="274" class="svg-label">.</text>
+            <text x="88" y="294" class="svg-mini">token 0</text>
+            <text x="194" y="294" class="svg-mini">token 1</text>
+            <text x="300" y="294" class="svg-mini">token 2</text>
+            <text x="406" y="294" class="svg-mini">token 3</text>
+
+            <rect x="176" y="140" width="90" height="54" rx="8" fill="#ffd7b0" stroke="#d67d2f" stroke-width="2" />
+            <text x="198" y="164" class="svg-label">cat</text>
+            <text x="186" y="184" class="svg-mini">highlighted slice</text>
+
+            <line x1="266" y1="167" x2="580" y2="167" stroke="#d67d2f" stroke-width="2" />
+
+            <rect x="560" y="20" width="340" height="320" rx="12" fill="#f8f8f8" stroke="#d8d8d8" />
+            <text x="584" y="58" class="svg-heading">One token vector</text>
+            <text x="584" y="86" class="svg-copy">hidden[0, 1, :] -> the vector for "cat"</text>
+
+            <rect x="590" y="140" width="34" height="72" fill="#dce9ff" stroke="#9bb8f0" />
+            <rect x="624" y="140" width="34" height="72" fill="#c9ddff" stroke="#9bb8f0" />
+            <rect x="658" y="140" width="34" height="72" fill="#b5d1ff" stroke="#9bb8f0" />
+            <rect x="692" y="140" width="34" height="72" fill="#9cc0ff" stroke="#6f9af0" />
+            <rect x="726" y="140" width="34" height="72" fill="#dce9ff" stroke="#9bb8f0" />
+            <rect x="760" y="140" width="34" height="72" fill="#c9ddff" stroke="#9bb8f0" />
+            <rect x="794" y="140" width="34" height="72" fill="#edf4ff" stroke="#9bb8f0" />
+            <rect x="828" y="140" width="34" height="72" fill="#b5d1ff" stroke="#9bb8f0" />
+
+            <text x="595" y="236" class="svg-mini">0.18</text>
+            <text x="629" y="236" class="svg-mini">-0.39</text>
+            <text x="664" y="236" class="svg-mini">0.11</text>
+            <text x="699" y="236" class="svg-mini">1.05</text>
+            <text x="732" y="236" class="svg-mini">-0.28</text>
+            <text x="766" y="236" class="svg-mini">0.72</text>
+            <text x="799" y="236" class="svg-mini">0.09</text>
+            <text x="833" y="236" class="svg-mini">-0.84</text>
+
+            <text x="584" y="286" class="svg-copy">Each number is one learned feature dimension.</text>
+            <text x="584" y="310" class="svg-copy">Together they represent the token after context is applied.</text>
+          </svg>
+          <figcaption>
+            A hidden-state tensor stores one vector per token per sequence.
+            Selecting one slice such as <code>hidden[0, 1, :]</code> gives the
+            model's internal representation for that token at that layer.
+          </figcaption>
+        </figure>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Tensor slice</th>
+                <th>Example values</th>
+                <th>What it represents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><code>hidden[0, 0, :]</code></th>
+                <td><code>[0.21, -0.44, 0.08, 1.12, -0.35, 0.67, 0.03, -0.91]</code></td>
+                <td>The internal vector for the first token in the first sequence</td>
+              </tr>
+              <tr>
+                <th><code>hidden[0, 1, :]</code></th>
+                <td><code>[0.18, -0.39, 0.11, 1.05, -0.28, 0.72, 0.09, -0.84]</code></td>
+                <td>The next token after the model updates its representation with context</td>
+              </tr>
+              <tr>
+                <th><code>hidden[1, 0, :]</code></th>
+                <td><code>[-0.07, 0.92, -0.31, 0.14, 0.55, -0.22, 0.41, 0.10]</code></td>
+                <td>The first token in a different sequence from the same batch</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Those numbers are not words by themselves. They are learned features.
+          Together they encode properties the model has inferred about the token
+          in context: syntax, meaning, nearby dependencies, and signals useful
+          for predicting the next token.
+        </p>
+
+        <h3>Vector databases in one sentence</h3>
+        <p>
+          A vector database stores embeddings and lets you search for similar
+          items quickly, often with metadata filters layered on top.
+        </p>
+
+        <h3>Where the analogy helps</h3>
+        <ul class="guide-list">
+          <li>Both physics and AI use geometry to make structure easier to reason about.</li>
+          <li>Both rely on tensors to represent complex relationships compactly.</li>
+          <li>Both benefit from thinking in spaces, coordinates, and transformations.</li>
+        </ul>
+
+        <h3>Where the analogy breaks</h3>
+        <ul class="guide-list">
+          <li>Embedding space is not physical spacetime.</li>
+          <li>Similarity search is not the same thing as physical motion or curvature.</li>
+          <li>AI tensors are implementation tools; relativity tensors are part of the theory itself.</li>
+        </ul>
+
+        <h3>Practical takeaway</h3>
+        <p>
+          If you understand tensors as “structured values across dimensions” and
+          vectors as “positions in a space,” you can hold both ideas at once:
+          Einstein uses tensors to describe reality, and AI uses tensors and
+          vectors to compute patterns and retrieve meaning.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
