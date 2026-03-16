@@ -112,7 +112,7 @@ h2 {
 
 .entries {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   padding-top: 1rem;
 }
@@ -124,12 +124,6 @@ h2 {
   background: var(--surface);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow);
-}
-
-.card-archive {
-  background:
-    linear-gradient(180deg, rgba(161, 79, 42, 0.08), rgba(255, 251, 245, 0.72)),
-    var(--surface);
 }
 
 .text-link {
