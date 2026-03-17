@@ -53,6 +53,7 @@
         </ul>
         <h3 id="work-notes">Work</h3>
         <ul class="guide-list">
+          <li><a href="#ai-career-pipeline">Using AI to build a career documentation pipeline</a> <span class="tag">Work</span> <span class="tag">AI</span></li>
           <li>0-&gt;1 Product Management <span class="tag">Work</span></li>
           <li>Product Lingo <span class="tag">Work</span></li>
           <li>Start Up vs. Big Org Product Management <span class="tag">Work</span></li>
@@ -231,6 +232,86 @@
         </div>
       </section>
 
+      <section class="section" id="ai-career-pipeline">
+        <p class="section-label">Work</p>
+        <h2>Note 3: Using AI to build a career documentation pipeline</h2>
+        <p>
+          I started with the browser: copying and pasting prompts, rewriting
+          bullets, and using each chat like a fresh scratchpad. That worked for
+          simple edits, but it broke down once I was doing this repeatedly
+          across resumes, cover letters, and application answers.
+        </p>
+        <p>
+          The browser got slow, and the bigger problem was context. Every new
+          chat meant starting over: re-explaining my work history, the kinds of
+          roles I was targeting, and the examples that actually represented my
+          experience well. I was spending too much time reconstructing the same
+          story.
+        </p>
+        <p>
+          Moving into the terminal changed that. Once I started keeping my
+          source material locally, AI stopped feeling like a one-off writing
+          tool and started behaving more like part of a workflow. I could save
+          context, refine it over time, and reuse it instead of rebuilding it
+          from scratch in every conversation.
+        </p>
+        <p>
+          From there I started treating my work history as structured input
+          instead of scattered memory. Roles, projects, outcomes, examples,
+          strengths, and themes all became reusable material. That material
+          could then feed multiple outputs: tailored resume bullets, cover
+          letters, application answers, and positioning for different kinds of
+          product and operations roles.
+        </p>
+        <p>
+          The most useful shift was separating documentation from generation.
+          First I document what I actually did and what changed because of it.
+          Then I use AI to transform that record for a specific use case. That
+          makes the process more reliable. I am not asking the model to invent
+          substance. I am asking it to organize, translate, and tailor a body
+          of work that already exists.
+        </p>
+        <div class="pipeline-diagram" aria-label="Career materials generation pipeline">
+          <div class="pipeline-source">
+            <p class="pipeline-label">Source of truth</p>
+            <h3>Work history</h3>
+            <ul class="guide-list compact-list">
+              <li>roles</li>
+              <li>projects</li>
+              <li>outcomes</li>
+              <li>strengths</li>
+              <li>themes</li>
+            </ul>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="pipeline-engine">
+            <p class="pipeline-label">AI workflow</p>
+            <h3>Context + tailoring</h3>
+            <p>
+              saved local context, role targeting, rewriting, and adaptation
+              for each application
+            </p>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="pipeline-output">
+            <p class="pipeline-label">Per application</p>
+            <div class="pipeline-doc">Resume</div>
+            <div class="pipeline-doc">Cover Letter</div>
+            <div class="pipeline-job">Job A</div>
+            <div class="pipeline-job">Job B</div>
+            <div class="pipeline-job">Job C</div>
+          </div>
+        </div>
+        <p>
+          What I am building now is a lightweight pipeline for career
+          materials: maintain the underlying history once, then generate better
+          resumes and cover letters with less repetition and less drift. The
+          browser was useful for getting started. The terminal made it faster.
+          Local context made it cumulative, and that is what turned prompting
+          into a real workflow.
+        </p>
+      </section>
+
       <section class="section" id="technical-guides">
         <p class="section-label">Technology and Science</p>
         <h2>Technical note set</h2>
@@ -242,7 +323,7 @@
 
       <section class="section" id="einstein-ai-guide">
         <p class="section-label">Technology and Science</p>
-        <h2>Note 3: Einstein and AI, tensor math and vector databases</h2>
+        <h2>Note 4: Einstein and AI, tensor math and vector databases</h2>
         <p>
           A simple map of how tensor math connects physics and machine learning,
           and how vectors show up in the retrieval layer of modern AI systems.

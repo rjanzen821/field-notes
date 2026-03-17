@@ -258,6 +258,67 @@ tbody th {
   background: rgba(255, 251, 245, 0.92);
 }
 
+.pipeline-diagram {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) auto minmax(0, 1fr) auto minmax(0, 1.05fr);
+  gap: 1rem;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.pipeline-source,
+.pipeline-engine,
+.pipeline-output {
+  padding: 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: rgba(255, 251, 245, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.pipeline-label {
+  margin: 0 0 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.pipeline-source h3,
+.pipeline-engine h3 {
+  margin: 0 0 0.6rem;
+}
+
+.pipeline-arrow {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.pipeline-doc,
+.pipeline-job {
+  display: inline-block;
+  margin: 0.35rem 0.35rem 0 0;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(161, 79, 42, 0.16);
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.pipeline-job {
+  background: rgba(46, 36, 28, 0.06);
+  border-color: var(--border);
+  font-weight: 500;
+}
+
+.compact-list {
+  margin-top: 0.35rem;
+}
+
 .visual-block svg {
   display: block;
   width: 100%;
@@ -321,6 +382,15 @@ code {
 
   .section {
     padding: 1.2rem;
+  }
+
+  .pipeline-diagram {
+    grid-template-columns: 1fr;
+  }
+
+  .pipeline-arrow {
+    justify-self: center;
+    transform: rotate(90deg);
   }
 
   th,
