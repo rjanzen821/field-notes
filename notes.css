@@ -176,6 +176,33 @@ figcaption {
   text-transform: uppercase;
 }
 
+.mini-frame {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: rgba(255, 251, 245, 0.92);
+}
+
+.mini-frame-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.mini-frame-table {
+  overflow-x: auto;
+}
+
+.mini-frame-note {
+  margin: 0.85rem 0 0;
+  font-weight: 700;
+  color: var(--text);
+}
+
 .table-wrap,
 .image-wrap {
   margin-top: 1.25rem;
